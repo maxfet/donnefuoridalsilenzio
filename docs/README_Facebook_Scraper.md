@@ -23,24 +23,24 @@
 
 ---
 
-## 🔧 **Installazione e Setup**
+## �️ **Setup e Installazione**
 
-### **1. Setup Iniziale:**
+### **1️⃣ Prerequisiti**
 ```bash
-# Vai nella directory del progetto
-cd /home/massimo/mfhnas01_massimo/Progetti/Software/Donnefuoridalsilenzio
+# Python 3.8+ richiesto
+python3 --version
 
-# Esegui script di setup
-./setup_facebook_scraper.sh
+# Pip aggiornato
+pip install --upgrade pip
 ```
 
-### **2. Attivazione Ambiente:**
+### **2️⃣ Installazione Dipendenze**
 ```bash
-# Attiva virtual environment
-source venv_facebook/bin/activate
+# Naviga nella cartella del progetto
+cd /path/to/donnefuoridalsilenzio
 
-# Verifica installazione
-python3 -c "import facebook_scraper; print('✅ Pronto!')"
+# Installa requirements
+pip install -r requirements.txt
 ```
 
 ---
@@ -49,8 +49,8 @@ python3 -c "import facebook_scraper; print('✅ Pronto!')"
 
 ### **🔄 Esecuzione Manuale:**
 ```bash
-# Attiva ambiente
-source venv_facebook/bin/activate
+# Naviga nella cartella scripts
+cd scripts/
 
 # Esegui scraper
 python3 facebook_scraper_donnefuori.py
@@ -62,10 +62,10 @@ python3 facebook_scraper_donnefuori.py
 crontab -e
 
 # Aggiungi riga per esecuzione giornaliera alle 08:00
-0 8 * * * /home/massimo/mfhnas01_massimo/Progetti/Software/Donnefuoridalsilenzio/run_facebook_scraper_cron.sh
+0 8 * * * /home/massimo/mfhnas01_massimo/Progetti/Software/Donnefuoridalsilenzio/scripts/run_facebook_scraper_cron.sh
 
 # O settimanale (ogni lunedì alle 09:00)
-0 9 * * 1 /home/massimo/mfhnas01_massimo/Progetti/Software/Donnefuoridalsilenzio/run_facebook_scraper_cron.sh
+0 9 * * 1 /home/massimo/mfhnas01_massimo/Progetti/Software/Donnefuoridalsilenzio/scripts/run_facebook_scraper_cron.sh
 ```
 
 ---
