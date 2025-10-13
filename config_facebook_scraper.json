@@ -1,0 +1,61 @@
+{
+  "facebook_scraper_config": {
+    "page_name": "donnefuoridalsilenziociampino",
+    "pages_to_scrape": 5,
+    "sleep_time_between_posts": 2,
+    "sleep_time_between_media": 1,
+    "download_media": true,
+    "download_images": true,
+    "download_videos": true,
+    "max_media_size_mb": 50,
+    "output_directory": "Post-facebook",
+    "media_directory": "Post-facebook/media",
+    "json_filename": "posts.json",
+    "log_filename": "facebook_scraper.log",
+    "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36",
+    "request_timeout": 30,
+    "retry_attempts": 3,
+    "date_format": "%Y-%m-%d %H:%M:%S",
+    "include_reactions": true,
+    "include_comments_count": true,
+    "include_shares_count": true,
+    "file_naming": {
+      "use_timestamp": true,
+      "use_post_id": true,
+      "media_prefix": "dfds"
+    }
+  },
+  "filters": {
+    "min_post_length": 10,
+    "exclude_empty_posts": true,
+    "keywords_to_include": [
+      "violenza",
+      "donne",
+      "diritti",
+      "femminicidio",
+      "pari opportunità",
+      "25 novembre",
+      "8 marzo"
+    ],
+    "date_range": {
+      "enabled": false,
+      "start_date": "2023-01-01",
+      "end_date": "2025-12-31"
+    }
+  },
+  "notifications": {
+    "telegram_bot": {
+      "enabled": false,
+      "bot_token": "",
+      "chat_id": ""
+    },
+    "email": {
+      "enabled": false,
+      "smtp_server": "",
+      "smtp_port": 587,
+      "email_from": "",
+      "email_to": "",
+      "password": ""
+    }
+  }
+}

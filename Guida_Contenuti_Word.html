@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guida per la Gestione Contenuti - Donne fuori dal silenzio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px;
+            background-color: #fff;
+            color: #333;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            border-bottom: 3px solid #2ea3f2;
+            padding-bottom: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2ea3f2;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            font-size: 18px;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .document-info {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-left: 4px solid #2ea3f2;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #2ea3f2;
+            font-size: 24px;
+            border-bottom: 2px solid #2ea3f2;
+            padding-bottom: 10px;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+        
+        h2 {
+            color: #333;
+            font-size: 20px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #2ea3f2;
+        }
+        
+        h3 {
+            color: #555;
+            font-size: 16px;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .highlight-box {
+            background-color: #e8f4fd;
+            border: 1px solid #2ea3f2;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .warning-box {
+            background-color: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .success-box {
+            background-color: #d4edda;
+            border: 1px solid #28a745;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        .danger-box {
+            background-color: #f8d7da;
+            border: 1px solid #dc3545;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .menu-structure {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .contact-info {
+            background-color: #2ea3f2;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            margin: 30px 0;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #2ea3f2;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .table th, .table td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .table th {
+            background-color: #2ea3f2;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .emoji {
+            font-size: 18px;
+            margin-right: 8px;
+        }
+        
+        .step {
+            background-color: #f8f9fa;
+            border-left: 4px solid #28a745;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .page-break {
+            page-break-before: always;
+        }
+        
+        @media print {
+            body {
+                padding: 20px;
+            }
+            .page-break {
+                page-break-before: always;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="logo">🌸 DONNE FUORI DAL SILENZIO</div>
+        <div class="subtitle">Associazione di Promozione Sociale al Femminile</div>
+    </div>
+
+    <div class="document-info">
+        <h2>📖 Guida per la Gestione dei Contenuti del Sito Web</h2>
+        <p><strong>Sito web:</strong> https://donnefuoridalsilenzioaps.it</p>
+        <p><strong>Target:</strong> Redattori, Editor e Responsabili Contenuti</p>
+        <p><strong>Data documentazione:</strong> 9 ottobre 2025</p>
+        <p><strong>Versione:</strong> 1.0</p>
+    </div>
+
+    <div class="section">
+        <h1>🏛️ Struttura del Sito Web</h1>
+        
+        <div class="menu-structure">
+            <h3>Menu Principale di Navigazione</h3>
+            <p>Il sito è organizzato con un menu principale che include:</p>
+            
+            <ol>
+                <li><span class="emoji">🏠</span><strong>Home</strong> - Pagina principale di benvenuto</li>
+                <li><span class="emoji">ℹ️</span><strong>L'associazione</strong> - Sezione istituzionale</li>
+                <li><span class="emoji">📰</span><strong>I nostri progetti</strong> - News, iniziative e eventi</li>
+                <li><span class="emoji">👥</span><strong>Diventa socia</strong> - Modalità di adesione</li>
+                <li><span class="emoji">📑</span><strong>News</strong> - Blog e aggiornamenti (sezione principale contenuti)</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="section">
+        <h1>📰 Gestione dei Contenuti</h1>
+        
+        <h2>📍 Dove Pubblicare le Notizie</h2>
+        
+        <div class="highlight-box">
+            <h3>Sezione "News" (Area Principale)</h3>
+            <p><strong>Percorso:</strong> Menu principale → News</p>
+            <p><strong>URL:</strong> https://donnefuoridalsilenzioaps.it/news/</p>
+            
+            <p><strong>Tipologie di contenuti da pubblicare qui:</strong></p>
+            <ul>
+                <li>📰 Notizie di attualità su violenza di genere</li>
+                <li>📊 Statistiche e report su femminicidi</li>
+                <li>🏛️ Aggiornamenti legislativi (es. Codice Rosso)</li>
+                <li>🌍 Notizie internazionali (Afghanistan, Iran)</li>
+                <li>📅 Comunicati dell'associazione</li>
+            </ul>
+        </div>
+
+        <div class="highlight-box">
+            <h3>Sezione "I nostri progetti"</h3>
+            <p><strong>Percorso:</strong> Menu principale → I nostri progetti</p>
+            <p><strong>URL:</strong> https://donnefuoridalsilenzioaps.it/progetti/</p>
+            
+            <p><strong>Tipologie di contenuti da pubblicare qui:</strong></p>
+            <ul>
+                <li>🎯 Progetti dell'associazione</li>
+                <li>📅 Eventi organizzati o co-organizzati</li>
+                <li>🤝 Collaborazioni con istituzioni</li>
+                <li>📚 Iniziative educative (incontri nelle scuole)</li>
+                <li>🎪 Partecipazione a manifestazioni pubbliche</li>
+            </ul>
+        </div>
+
+        <h2>📂 Categorie per Organizzare i Contenuti</h2>
+        
+        <p>Quando pubblichi un articolo, seleziona sempre la categoria appropriata per facilitare la navigazione:</p>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Categoria</th>
+                    <th>Utilizzo</th>
+                    <th>Esempi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>📰 Blog</strong></td>
+                    <td>Articoli generali e riflessioni</td>
+                    <td>Analisi sociali, opinioni</td>
+                </tr>
+                <tr>
+                    <td><strong>📅 Eventi</strong></td>
+                    <td>Annunci e resoconti eventi</td>
+                    <td>Manifestazioni, convegni</td>
+                </tr>
+                <tr>
+                    <td><strong>🛡️ Sostegno vittime di violenza</strong></td>
+                    <td>Informazioni e guide pratiche</td>
+                    <td>Come chiedere aiuto, numeri utili</td>
+                </tr>
+                <tr>
+                    <td><strong>📊 Statistiche</strong></td>
+                    <td>Dati e report numerici</td>
+                    <td>Report ISTAT, ricerche</td>
+                </tr>
+                <tr>
+                    <td><strong>🏛️ Agevolazioni</strong></td>
+                    <td>Informazioni su diritti e benefici</td>
+                    <td>Reddito di libertà, permessi</td>
+                </tr>
+                <tr>
+                    <td><strong>🚫 Diritti negati</strong></td>
+                    <td>Violazioni diritti umani</td>
+                    <td>Discriminazioni, violenze</td>
+                </tr>
+                <tr>
+                    <td><strong>🇮🇷 Repressione in Iran</strong></td>
+                    <td>Situazione donne iraniane</td>
+                    <td>Proteste, repressioni</td>
+                </tr>
+                <tr>
+                    <td><strong>🏥 Salute fisica</strong></td>
+                    <td>Impatti violenza sulla salute</td>
+                    <td>Conseguenze mediche, cure</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="section">
+        <h1>✍️ Come Scrivere Contenuti Efficaci</h1>
+        
+        <h2>📝 Struttura Articolo Consigliata</h2>
+        
+        <div class="step">
+            <h3>1. Titolo (H1)</h3>
+            <ul>
+                <li><strong>Massimo 60 caratteri</strong> per ottimizzazione SEO</li>
+                <li><strong>Chiaro e descrittivo</strong></li>
+                <li><strong>Include parole chiave</strong> rilevanti</li>
+                <li><strong>Esempio:</strong> "Afghanistan: burqa obbligatorio e diritti negati"</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>2. Sommario/Introduzione</h3>
+            <ul>
+                <li><strong>1-2 frasi</strong> che riassumono l'articolo</li>
+                <li><strong>Coinvolge il lettore</strong> fin dall'inizio</li>
+                <li><strong>Include il messaggio principale</strong></li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>3. Corpo dell'Articolo</h3>
+            <ul>
+                <li><strong>Paragrafi brevi</strong> (massimo 3-4 righe)</li>
+                <li><strong>Sottotitoli (H2, H3)</strong> per dividere il contenuto</li>
+                <li><strong>Linguaggio chiaro e accessibile</strong></li>
+                <li><strong>Fatti supportati da fonti</strong> autorevoli</li>
+            </ul>
+        </div>
+
+        <div class="step">
+            <h3>4. Conclusione</h3>
+            <ul>
+                <li><strong>Call to action</strong> quando appropriato</li>
+                <li><strong>Link a risorse utili</strong></li>
+                <li><strong>Invito alla condivisione</strong></li>
+            </ul>
+        </div>
+
+        <h2>🎯 Ottimizzazione SEO per Maggiore Visibilità</h2>
+        
+        <div class="warning-box">
+            <h3>⚠️ Importante: Compilare sempre i campi Yoast SEO</h3>
+            <ul>
+                <li><strong>🎯 Parola chiave principale</strong> (focus keyword)</li>
+                <li><strong>📝 Meta description</strong> (massimo 155 caratteri)</li>
+                <li><strong>🔗 Slug URL</strong> (breve e descrittivo)</li>
+            </ul>
+        </div>
+
+        <h3>Elementi SEO da curare sempre:</h3>
+        <ul>
+            <li><strong>Alt text</strong> per tutte le immagini</li>
+            <li><strong>Link interni</strong> ad altri articoli del sito</li>
+            <li><strong>Link esterni</strong> a fonti autorevoli</li>
+            <li><strong>Formattazione</strong> con grassetti ed elenchi</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="section">
+        <h1>📸 Gestione Immagini e Media</h1>
+        
+        <h2>🖼️ Linee Guida per le Immagini</h2>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Aspetto</th>
+                    <th>Requisiti</th>
+                    <th>Note</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Formato</strong></td>
+                    <td>JPG o PNG</td>
+                    <td>JPG per foto, PNG per grafici</td>
+                </tr>
+                <tr>
+                    <td><strong>Dimensioni</strong></td>
+                    <td>Massimo 1920px larghezza</td>
+                    <td>Ridimensionare se superiori</td>
+                </tr>
+                <tr>
+                    <td><strong>Peso file</strong></td>
+                    <td>Massimo 500KB per immagine</td>
+                    <td>Comprimere se necessario</td>
+                </tr>
+                <tr>
+                    <td><strong>Nome file</strong></td>
+                    <td>Descrittivo e chiaro</td>
+                    <td>es. "manifestazione-ciampino-8marzo.jpg"</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="danger-box">
+            <h3>⚖️ Aspetti Legali - Copyright</h3>
+            <ul>
+                <li><strong>Usare solo immagini libere</strong> o di proprietà dell'associazione</li>
+                <li><strong>Fonti consigliate:</strong> Unsplash, Pexels, archivio associazione</li>
+                <li><strong>Sempre indicare fonte</strong> quando richiesto</li>
+                <li><strong>Evitare immagini da Google Immagini</strong> senza verifica licenza</li>
+            </ul>
+        </div>
+
+        <h3>Alt Text per Accessibilità</h3>
+        <div class="success-box">
+            <p><strong>Cosa inserire nel campo Alt Text:</strong></p>
+            <ul>
+                <li>Descrizione breve del contenuto dell'immagine</li>
+                <li>Importante per SEO e utenti ipovedenti</li>
+                <li><strong>Esempio:</strong> "Gruppo di donne durante manifestazione contro violenza di genere"</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="section">
+        <h1>👥 Ruoli e Permessi Utenti</h1>
+        
+        <h2>🔑 Livelli di Accesso</h2>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ruolo</th>
+                    <th>Permessi</th>
+                    <th>Ideale per</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Amministratori</strong><br>(3 utenti)</td>
+                    <td>
+                        • Accesso completo<br>
+                        • Pubblicare, modificare, eliminare<br>
+                        • Gestione plugin e impostazioni
+                    </td>
+                    <td>Responsabili tecnici e contenuti</td>
+                </tr>
+                <tr>
+                    <td><strong>Autori</strong><br>(2 utenti)</td>
+                    <td>
+                        • Scrivere e pubblicare propri articoli<br>
+                        • Non possono modificare articoli altrui
+                    </td>
+                    <td>Collaboratori regolari</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>📝 Flusso di Pubblicazione</h2>
+        
+        <div class="step">
+            <h3>Per gli Autori:</h3>
+            <ol>
+                <li><strong>Scrivi</strong> l'articolo in Bozza</li>
+                <li><strong>Rivedi</strong> contenuto e completar SEO</li>
+                <li><strong>Pubblica</strong> direttamente</li>
+                <li><strong>Condividi</strong> sui social network</li>
+            </ol>
+        </div>
+
+        <div class="step">
+            <h3>Per Collaboratori Esterni:</h3>
+            <ol>
+                <li><strong>Invio</strong> contenuto via email</li>
+                <li><strong>Revisione</strong> da parte amministratori</li>
+                <li><strong>Pubblicazione</strong> con attribuzione</li>
+            </ol>
+        </div>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="section">
+        <h1>📱 Social Media e Condivisione</h1>
+        
+        <h2>🔗 Profili Social Collegati</h2>
+        
+        <div class="highlight-box">
+            <p><strong>📘 Facebook:</strong> <a href="https://www.facebook.com/donnefuoridalsilenziociampino/">@donnefuoridalsilenziociampino</a></p>
+            <p><strong>📸 Instagram:</strong> <a href="https://www.instagram.com/donnefuoridalsilenzio/">@donnefuoridalsilenzio</a></p>
+            <p><em>Plugin Monarch automaticamente aggiunge bottoni di condivisione a ogni articolo</em></p>
+        </div>
+
+        <h2>📢 Best Practice per la Condivisione</h2>
+        
+        <h3>Sui Social Network:</h3>
+        <ul>
+            <li><strong>Riassunto accattivante</strong> del contenuto</li>
+            <li><strong>Hashtag rilevanti</strong> (#donnefuoridalsilenzio #stopviolenza #ciampino)</li>
+            <li><strong>Immagine di anteprima</strong> curata e significativa</li>
+            <li><strong>Call to action</strong> per leggere l'articolo completo</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h1>🎯 Obiettivi e Linee Guida Editoriali</h1>
+        
+        <h2>🎪 Missione Editoriale</h2>
+        <ul>
+            <li><strong>Sensibilizzazione:</strong> Su violenza di genere e diritti delle donne</li>
+            <li><strong>Informazione:</strong> Aggiornamenti legislativi e sociali</li>
+            <li><strong>Supporto:</strong> Guide pratiche per vittime di violenza</li>
+            <li><strong>Advocacy:</strong> Promozione diritti e pari opportunità</li>
+        </ul>
+
+        <h2>📊 Temi Prioritari da Coprire</h2>
+        <ol>
+            <li><strong>🚨 Violenza domestica e femminicidi</strong></li>
+            <li><strong>🏛️ Aggiornamenti normativi (Codice Rosso)</strong></li>
+            <li><strong>🌍 Situazione internazionale (Iran, Afghanistan)</strong></li>
+            <li><strong>🏥 Supporto psicologico e legale</strong></li>
+            <li><strong>📍 Iniziative locali (Ciampino, Roma)</strong></li>
+            <li><strong>📅 Giornate tematiche (8 marzo, 25 novembre)</strong></li>
+        </ol>
+
+        <h2>✅ Da Fare Sempre</h2>
+        <div class="success-box">
+            <ul>
+                <li>✔️ <strong>Verificare fonti</strong> prima di pubblicare</li>
+                <li>✔️ <strong>Usare linguaggio inclusivo</strong> e rispettoso</li>
+                <li>✔️ <strong>Citare fonti</strong> per dati e statistiche</li>
+                <li>✔️ <strong>Ottimizzare per SEO</strong> (Yoast SEO)</li>
+                <li>✔️ <strong>Aggiungere call to action</strong> quando appropriato</li>
+            </ul>
+        </div>
+
+        <h2>❌ Da Evitare Assolutamente</h2>
+        <div class="danger-box">
+            <ul>
+                <li>❌ <strong>Linguaggio offensivo</strong> o discriminatorio</li>
+                <li>❌ <strong>Informazioni non verificate</strong> o fake news</li>
+                <li>❌ <strong>Contenuti troppo lunghi</strong> senza sottotitoli</li>
+                <li>❌ <strong>Immagini senza alt text</strong></li>
+                <li>❌ <strong>Dimenticare categorizzazione</strong> degli articoli</li>
+            </ul>
+        </div>
+
+        <h2>🎨 Tono di Voce dell'Associazione</h2>
+        <ul>
+            <li><strong>💪 Determinato</strong> ma non aggressivo</li>
+            <li><strong>📚 Informativo</strong> e educativo</li>
+            <li><strong>❤️ Empatico</strong> verso le vittime</li>
+            <li><strong>🔍 Professionale</strong> nelle analisi</li>
+            <li><strong>🤝 Collaborativo</strong> con altre realtà</li>
+        </ul>
+    </div>
+
+    <div class="page-break"></div>
+
+    <div class="contact-info">
+        <h1>📞 Contatti e Supporto</h1>
+        
+        <h2>📧 Contatti Istituzionali</h2>
+        <p><strong>Email principale:</strong> donnefuoridalsilenzio@gmail.com</p>
+        <p><strong>PEC:</strong> donnefuoridalsilenzio@pec.buffetti.it</p>
+        <p><strong>Telefono:</strong> +39 350 075 6053</p>
+        
+        <h2>🆘 Per Problemi Tecnici</h2>
+        <p><strong>Admin tecnico:</strong> massimo.fettucciari@libero.it</p>
+        
+        <h2>✍️ Per Dubbi Editoriali</h2>
+        <p><strong>Responsabile contenuti:</strong> cristina.nuzzo (cristinanuzzo60@gmail.com)</p>
+        <p><strong>Editor principale:</strong> michele.torre (web@agilad.eu)</p>
+    </div>
+
+    <div class="footer">
+        <p><strong>Associazione di Promozione Sociale "Donne fuori dal silenzio"</strong></p>
+        <p>Ciampino (Roma) • Fondata nel 2021</p>
+        <p>Documento aggiornato: 9 ottobre 2025 • Versione 1.0</p>
+        <p>Prossima revisione: Gennaio 2026</p>
+    </div>
+</body>
+</html>
