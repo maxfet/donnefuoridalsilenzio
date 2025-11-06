@@ -16,6 +16,9 @@ build/
 config/facebook_cookies.json
 config/facebook_graph_token.txt
 config/facebook_page_id.txt
+Credenziali*.txt
+*credenziali*.txt
+*.credentials
 
 # Output scraping
 Post-facebook/
