@@ -1,49 +1,27 @@
-# 📂 Documentazione progetto Donne Fuori Dal Silenzio
+# 📂 Documentazione Facebook Scraper
 
-Questa cartella contiene la documentazione tecnica e funzionale del progetto.
+Questa cartella contiene la documentazione tecnica del progetto Facebook Scraper.
 
-## 📋 **Documentazione Disponibile:**
-
-### **🌐 Sito Web e Hosting**
-- **Documentazione_Sito_DonneFuoriDalSilenzio.md** - Documentazione completa del sito
-- **Documentazione_Tecnica_Manutenzione.md** - Guide per manutenzione tecnica
-- **Configurazioni_dfds_maxfet_cloud.md** - Configurazioni server di test cloud
-
-### **🔧 Setup e Clonazione**
-- **Guida_Clonazione_QNAP.md** - Procedura completa per clonazione su QNAP
-- **Guida_Clonazione_Sito_Locale.md** - Setup ambiente locale
-- **QNAP_mfh-nas01_config.md** - Configurazione MariaDB su QNAP
-- **QNAP_MariaDB_Setup.md** - Setup database QNAP
+## � **Documentazione Disponibile:**
 
 ### **📱 Facebook Scraper**
 - **README_Facebook_Scraper.md** - Documentazione completa Facebook scraper
 - **Documentazione_Tecnica_Facebook_Scraper.md** - Dettagli tecnici implementazione
-
-### **📝 Gestione Contenuti**
-- **Guida_Gestione_Contenuti.md** - Procedure per gestione contenuti
-- **Guida_Contenuti_Word.html** - Guide per importazione da Word
-
-### **🔍 Riferimenti Tecnici**
-- **MariaDB_vs_MySQL_WordPress.md** - Comparazione database
-- **Verifica_Coerenza_Guide.md** - Controllo coerenza documentazione
+- **Stato_Progetto_Facebook_Scraper.md** - Status e next steps
+- **Privacy_Policy.md** - Privacy Policy per App Review
 
 ---
 
-## 🚀 **Percorsi di Lettura Consigliati:**
+## 🚀 **Quick Reference:**
 
-### **👨‍💻 Per Sviluppatori:**
-1. Documentazione_Sito_DonneFuoriDalSilenzio.md
-2. Documentazione_Tecnica_Manutenzione.md
-3. README_Facebook_Scraper.md
+### **Per Setup Iniziale:**
+1. Leggi `README_Facebook_Scraper.md`
+2. Configura token/cookies seguendo le guide negli script
+3. Consulta `Documentazione_Tecnica_Facebook_Scraper.md` per dettagli
 
-### **🔧 Per Setup Tecnico:**
-1. Guida_Clonazione_QNAP.md
-2. QNAP_mfh-nas01_config.md
-3. Guida_Clonazione_Sito_Locale.md
-
-### **📝 Per Gestione Contenuti:**
-1. Guida_Gestione_Contenuti.md
-2. Documentazione_Tecnica_Facebook_Scraper.md
+### **Per App Review Facebook:**
+1. Leggi `Stato_Progetto_Facebook_Scraper.md`
+2. Usa `Privacy_Policy.md` per requisiti
 
 ---
-*Documentazione aggiornata: 13 ottobre 2025*
+*Documentazione aggiornata: 6 novembre 2025*

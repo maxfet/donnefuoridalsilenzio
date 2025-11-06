@@ -27,6 +27,19 @@ QNAP*data*
 Post-facebook/
 *.log
 
+# Documentazione WordPress/QNAP (locale, non per GitHub)
+docs/Configurazioni_dfds_maxfet_cloud.md
+docs/Documentazione_Sito_DonneFuoriDalSilenzio.md
+docs/Documentazione_Tecnica_Manutenzione.md
+docs/Guida_Clonazione_QNAP.md
+docs/Guida_Clonazione_Sito_Locale.md
+docs/Guida_Contenuti_Word.html
+docs/Guida_Gestione_Contenuti.md
+docs/MariaDB_vs_MySQL_WordPress.md
+docs/QNAP_MariaDB_Setup.md
+docs/QNAP_mfh-nas01_config.md
+docs/Verifica_Coerenza_Guide.md
+
 # IDE
 .vscode/
 .idea/
