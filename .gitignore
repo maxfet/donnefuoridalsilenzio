@@ -16,9 +16,12 @@ build/
 config/facebook_cookies.json
 config/facebook_graph_token.txt
 config/facebook_page_id.txt
+config/QNAP-staging-data
 Credenziali*.txt
 *credenziali*.txt
 *.credentials
+QNAP*data*
+*QNAP*data*
 
 # Output scraping
 Post-facebook/
