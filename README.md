@@ -1,45 +1,44 @@
-# Progetto Donne Fuori Dal Silenzio
+# Progetto Donne Fuori Dal Silenzio - Facebook Scraper
 
-Questo repository contiene tutti gli strumenti, documentazione e script per la gestione del sito web e dei contenuti social di "Donne Fuori Dal Silenzio".
+Strumenti per l'archiviazione automatica dei contenuti pubblici dalla pagina Facebook "Donne Fuori Dal Silenzio Ciampino".
 
 **Ultimo aggiornamento:** 6 novembre 2025
+
+## 📋 Descrizione
+
+Questo progetto fornisce diversi metodi per scaricare e archiviare i post pubblici dalla pagina Facebook dell'associazione, con lo scopo di:
+- 📚 Preservare la memoria storica delle attività
+- 💾 Creare backup dei contenuti pubblicati
+- 📊 Organizzare i dati in formato strutturato (JSON)
 
 ## Struttura del Progetto
 
 ```
 📁 docs/                     # 📚 Documentazione completa
-├── Documentazione_Sito_DonneFuoriDalSilenzio.md
-├── Documentazione_Tecnica_Manutenzione.md
 ├── Documentazione_Tecnica_Facebook_Scraper.md
-├── Guida_Clonazione_QNAP.md
-├── Guida_Clonazione_Sito_Locale.md
-├── Configurazioni_dfds_maxfet_cloud.md
-├── QNAP_mfh-nas01_config.md
+├── Stato_Progetto_Facebook_Scraper.md
+├── Privacy_Policy.md
 └── README_Facebook_Scraper.md
 
-📁 scripts/                  # 🐍 Script Python e automazione
-├── facebook_scraper_donnefuori.py
-├── run_facebook_scraper_cron.sh
-└── setup_facebook_scraper.sh
+📁 scripts/                  # 🐍 Script Python
+├── facebook_scraper_donnefuori.py    # Scraper con cookies
+├── facebook_graph_scraper.py         # Scraper Graph API
+├── simple_facebook_scraper.py        # Scraper alternativo
+└── [guide e test vari]
 
 📁 config/                   # ⚙️ File di configurazione
-├── facebook_scraper_config.py
-├── config_facebook_scraper.json
-└── QNAP-staging-data
+├── facebook_cookies_template.json
+├── facebook_graph_token_template.txt
+└── facebook_page_id_template.txt
 
-📁 Post-facebook/            # 📄 Dati scaricati da Facebook (JSON)
+📁 Post-facebook/            # 📄 Dati scaricati (JSON)
 
 📄 requirements.txt          # 📦 Dipendenze Python
-📄 workspace.donnefuoridalsilenzio.code-workspace
+📄 privacy.html             # Privacy Policy (GitHub Pages)
+📄 index.html               # Homepage progetto
 ```
 
 ## Componenti Principali
-
-### 🌐 Sito Web WordPress
-- **Produzione**: Hosting cloud standard
-- **Test/Staging**: Server QNAP locale con MariaDB
-- **Tema**: Divi 4.27.4
-- **Database**: MariaDB 10.5.8 (porta 3307)
 
 ### 🔧 Facebook Scraper
 - Scraping automatico dei post dalla pagina Facebook
@@ -59,9 +58,9 @@ Questo repository contiene tutti gli strumenti, documentazione e script per la g
 - Framework pronto per quando le API saranno disponibili
 
 ### 📋 Documentazione
-- Guide complete per setup, manutenzione e clonazione
-- Configurazioni specifiche per QNAP
-- Procedure tecniche dettagliate
+- Guide complete per setup e configurazione
+- Privacy Policy per App Review Facebook
+- Stato progetto e next steps
 
 ## Quick Start
 
@@ -70,34 +69,40 @@ Questo repository contiene tutti gli strumenti, documentazione e script per la g
 # Installa dipendenze
 pip install -r requirements.txt
 
-# Esegui setup iniziale
-./scripts/setup_facebook_scraper.sh
+# Configura token Graph API
+echo "YOUR_TOKEN" > config/facebook_graph_token.txt
+echo "100066348746548" > config/facebook_page_id.txt
 
-# Avvia scraping manuale
+# Esegui scraper
 cd scripts/
-python facebook_scraper_donnefuori.py
+python facebook_graph_scraper.py
 ```
 
-### Clonazione Sito su QNAP
-1. Consultare `docs/Guida_Clonazione_QNAP.md`
-2. Configurare MariaDB come da `docs/QNAP_mfh-nas01_config.md`
-3. Utilizzare Duplicator per la migrazione
+### Metodi Alternativi
+Consulta la documentazione in `docs/` per:
+- Setup con cookies (facebook-scraper)
+- Configurazione Graph API
+- Richiesta App Review Facebook
 
 ## Tecnologie
 
-- **Backend**: WordPress 6.6.3, PHP 8.2, MariaDB 10.5.8
-- **Frontend**: Divi Theme, CSS personalizzato
-- **Automazione**: Python 3, facebook-scraper, bash scripts
-- **Infrastruttura**: QNAP NAS, Web Station
-- **Version Control**: Git
+- **Python 3.8+**: facebook-scraper, requests, beautifulsoup4
+- **Facebook Graph API**: API ufficiale per accesso dati
+- **GitHub Pages**: Hosting Privacy Policy
 
 ## Contribuzione
 
 Per modifiche o aggiornamenti:
 1. Consultare la documentazione in `docs/`
-2. Testare sempre su ambiente QNAP di staging
+2. Testare le modifiche localmente
 3. Aggiornare la documentazione correlata
 4. Commit con messaggi descrittivi
 
+## Links
+
+- **Privacy Policy**: https://maxfet.github.io/donnefuoridalsilenzio/privacy.html
+- **Pagina Facebook**: https://www.facebook.com/donnefuoridalsilenziociampino
+- **Repository**: https://github.com/maxfet/donnefuoridalsilenzio
+
 ---
-*Ultimo aggiornamento: 13 ottobre 2025*
+*Ultimo aggiornamento: 6 novembre 2025*
