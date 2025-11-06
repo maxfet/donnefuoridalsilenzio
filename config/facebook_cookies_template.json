@@ -1,0 +1,9 @@
+{
+  "_comment": "Template per cookies Facebook - Sostituisci XXXXXXX con i tuoi cookies reali",
+  "_instructions": "1. Vai su facebook.com loggato 2. F12 > Application > Cookies 3. Copia i valori",
+  "c_user": "XXXXXXXXXXXXXXX",
+  "xs": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "sb": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", 
+  "datr": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "fr": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+}

@@ -9,6 +9,7 @@ requests>=2.31.0
 
 # Parsing e utilità
 lxml>=4.9.0
+lxml_html_clean>=0.4.0
 beautifulsoup4>=4.12.0
 
 # Gestione date e tempo

@@ -32,10 +32,16 @@ logger = logging.getLogger(__name__)
 class DonneFuoriScraper:
     def __init__(self):
         """Inizializza lo scraper per Donne Fuori Dal Silenzio"""
-        self.page_name = "donnefuoridalsilenziociampino"  # Nome pagina Facebook
-        self.output_dir = Path("Post-facebook")
+        self.page_name = "donnefuoridalsilenziociampino"  # Nome pagina Facebook (versione completa)
+        # Imposta percorso relativo alla directory del progetto (parent di scripts)
+        self.project_root = Path(__file__).parent.parent
+        self.output_dir = self.project_root / "Post-facebook"
         self.media_dir = self.output_dir / "media"
         self.posts_file = self.output_dir / "posts.json"
+        
+        # Percorsi per file cookies
+        self.cookies_file = self.project_root / "config" / "facebook_cookies.txt"
+        self.cookies_json = self.project_root / "config" / "facebook_cookies.json"
         
         # Crea le directory se non esistono
         self.output_dir.mkdir(exist_ok=True)
@@ -46,6 +52,36 @@ class DonneFuoriScraper:
         
         logger.info(f"Inizializzato scraper per pagina: {self.page_name}")
         logger.info(f"Directory output: {self.output_dir.absolute()}")
+        
+        # Controlla se esistono cookies
+        if self.cookies_file.exists():
+            logger.info("✅ Trovato file cookies Netscape")
+        elif self.cookies_json.exists():
+            logger.info("✅ Trovato file cookies JSON")
+        else:
+            logger.warning("⚠️ Nessun file cookies trovato - potrebbe limitare i risultati")
+
+    def load_cookies(self):
+        """
+        Carica i cookies di Facebook per l'autenticazione
+        
+        Returns:
+            str|dict: Percorso file cookies o dizionario cookies
+        """
+        if self.cookies_file.exists():
+            logger.info(f"📁 Caricando cookies da: {self.cookies_file}")
+            return str(self.cookies_file)
+        elif self.cookies_json.exists():
+            logger.info(f"📁 Caricando cookies da: {self.cookies_json}")
+            try:
+                with open(self.cookies_json, 'r') as f:
+                    return json.load(f)
+            except Exception as e:
+                logger.error(f"Errore caricando cookies JSON: {e}")
+                return None
+        else:
+            logger.warning("⚠️ Nessun file cookies disponibile")
+            return None
 
     def download_media(self, media_url, post_id, media_type="image"):
         """
@@ -167,17 +203,34 @@ class DonneFuoriScraper:
             logger.info(f"Inizio scraping pagina {self.page_name}")
             logger.info(f"Pagine da scaricare: {pages}")
             
-            # Configurazione facebook-scraper
-            posts = get_posts(
-                self.page_name,
-                pages=pages,
-                extra_info=True,
-                options={
-                    "comments": True,
-                    "reactors": True,
-                    "allow_extra_requests": True
-                }
-            )
+            # Carica cookies se disponibili
+            cookies = self.load_cookies()
+            
+            # Configurazione facebook-scraper con cookies
+            scraper_options = {
+                "comments": True,
+                "reactors": True,
+                "allow_extra_requests": True
+            }
+            
+            # Se abbiamo cookies, li usiamo
+            if cookies:
+                logger.info("🔐 Utilizzando cookies di autenticazione")
+                posts = get_posts(
+                    self.page_name,
+                    pages=pages,
+                    extra_info=True,
+                    cookies=cookies,
+                    options=scraper_options
+                )
+            else:
+                logger.warning("⚠️ Scraping senza autenticazione - risultati limitati")
+                posts = get_posts(
+                    self.page_name,
+                    pages=pages,
+                    extra_info=True,
+                    options=scraper_options
+                )
             
             post_count = 0
             for post in posts:

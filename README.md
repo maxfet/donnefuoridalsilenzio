@@ -2,6 +2,8 @@
 
 Questo repository contiene tutti gli strumenti, documentazione e script per la gestione del sito web e dei contenuti social di "Donne Fuori Dal Silenzio".
 
+**Ultimo aggiornamento:** 6 novembre 2025
+
 ## Struttura del Progetto
 
 ```
@@ -41,9 +43,20 @@ Questo repository contiene tutti gli strumenti, documentazione e script per la g
 
 ### 🔧 Facebook Scraper
 - Scraping automatico dei post dalla pagina Facebook
+- **Stato:** In sviluppo - limitazioni tecniche Facebook 2025
+- Metodi implementati:
+  - facebook-scraper con cookies (limitato da anti-scraping)
+  - Graph API con token (richiede App Review)
+  - Scraper alternativo requests-based
 - Salvataggio dati in formato JSON
 - Download automatico di media (immagini/video)
-- Esecuzione schedulata via cron
+- Esecuzione schedulata via cron (quando funzionante)
+
+**Limitazioni attuali:**
+- Facebook ha rafforzato protezioni anti-scraping
+- Graph API richiede permission `pages_read_engagement`
+- Permission richiedono App Review Facebook (2-4 settimane)
+- Framework pronto per quando le API saranno disponibili
 
 ### 📋 Documentazione
 - Guide complete per setup, manutenzione e clonazione

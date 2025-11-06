@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+venv_facebook/
+ENV/
+env/
+*.egg-info/
+dist/
+build/
+
+# Dati sensibili - NON committare
+config/facebook_cookies.json
+config/facebook_graph_token.txt
+config/facebook_page_id.txt
+
+# Output scraping
+Post-facebook/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporanei
+*.tmp
+*.bak
+*~
